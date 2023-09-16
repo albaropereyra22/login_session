@@ -4,11 +4,26 @@
     <ClCompile Include="C:\Users\dell\login_session\main.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\dell\login_session\build\LoginPage.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dell\login_session\build\LogoutPage.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <CustomBuild Include="C:\Users\dell\login_session\build\CMakeFiles\87816dca84883c1a801bbdfa5e867345\LoginPage.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\dell\login_session\build\CMakeFiles\87816dca84883c1a801bbdfa5e867345\LogoutPage.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
     <CustomBuild Include="C:\Users\dell\login_session\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{322DA438-A135-3C6D-B27D-85CA576C41EF}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{C6B5AF62-0F9D-3210-8B96-B1209E92FDE1}</UniqueIdentifier>
     </Filter>

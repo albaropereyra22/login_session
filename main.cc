@@ -9,13 +9,14 @@ int main()
         "/",
         [](const HttpRequestPtr &req,
            std::function<void(const HttpResponsePtr &)> &&callback) {
+                LOG_INFO << "You have reached index.";
             bool loggedIn =
                 req->session()->getOptional<bool>("loggedIn").value_or(false);
             HttpResponsePtr resp;
             if (loggedIn == false)
-                resp = HttpResponse::newHttpViewResponse("LoginPage");
+                resp = HttpResponse::newHttpViewResponse("LoginPage.csp");
             else
-                resp = HttpResponse::newHttpViewResponse("LogoutPage");
+                resp = HttpResponse::newHttpViewResponse("LogoutPage.csp");
             callback(resp);
         });
 
@@ -23,6 +24,7 @@ int main()
         "/logout",
         [](const HttpRequestPtr &req,
            std::function<void(const HttpResponsePtr &)> &&callback) {
+                LOG_INFO << "You have reached logout";
             HttpResponsePtr resp = HttpResponse::newHttpResponse();
             req->session()->erase("loggedIn");
             resp->setBody("<script>window.location.href = \"/\";</script>");
@@ -37,7 +39,7 @@ int main()
             HttpResponsePtr resp = HttpResponse::newHttpResponse();
             std::string user = req->getParameter("user");
             std::string passwd = req->getParameter("passwd");
-
+            LOG_INFO << "You have reached login";
             // NOTE: Do not use MD5 for the password hash under any
             // circumstances. We only use it because Drogon is not a
             // cryptography library, so it does not include a better hash
