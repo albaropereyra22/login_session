@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>session example</title>
 </head>
-	<body>
+<body>
 	<form action="/logout" method="post">
 		<div class="container">
 			<button type="submit">Logout</button>
